@@ -1,5 +1,6 @@
 import React from "react";
-const Article = ({title, date = "January 1, 1970", preview}) => {
+import Minutes from "./Minutes"
+const Article = ({title, date = "January 1, 1970", preview, minutes}) => {
     
    
   
@@ -7,6 +8,7 @@ const Article = ({title, date = "January 1, 1970", preview}) => {
       <article>
         <h3>{title}</h3>
         <small>{date}</small>
+        <p>{Minutes(minutes)}:{minutes} Minures to read</p>
         <p>{preview}</p>
       </article>
     );
